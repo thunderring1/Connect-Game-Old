@@ -4,8 +4,6 @@ import javafx.scene.shape.Circle;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class ShapeFactory {
-  private double[] polCoor;
-
   private double radius;
 
   private double height, width;
@@ -32,7 +30,6 @@ public class ShapeFactory {
   public Color getFillColor() { return fillColor; }
 
   public void setDimensions(double width, double height) {
-    //Polygon shape = new Polygon(polCoor);
     Circle shape = new Circle(radius);
 
     this.height = shape.getLayoutBounds().getHeight();
@@ -45,14 +42,12 @@ public class ShapeFactory {
   public double getHeight() { return height; }
   public double getWidth() { return width; }
 
-  //public void setShape(double[] coors) { polCoor = coors; }
 
   public void setRadius(double radius) {
     this.radius = radius;
   }
 
   public Circle makeShape() {
-    //Polygon shape = new Polygon(polCoor);
     Circle shape = new Circle(radius);
     shape.setFill(fillColor);
     shape.setStroke(strokeColor);
